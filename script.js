@@ -1,4 +1,26 @@
 jQuery(document).ready(function($){
+
+   function changeEyeColor(){
+      var colorDeg = document.getElementById("EyeColor").value; 
+      forchange.style.filter = "hue-rotate(" + colorDeg +"deg)";
+   }
+   $(".colorChange input").on("change", changeEyeColor);
+
+   
+   function changeTopColor(){
+      var colorDeg = document.getElementById("TopColor").value; 
+      forchangeTop.style.filter = "hue-rotate(" + colorDeg +"deg)";
+   }
+   $(".colorChangeTop input").on("change", changeTopColor);
+
+
+   function changeHairColor(){
+      var colorDeg = document.getElementById("HairColor").value; 
+      forchangeHair.style.filter = "hue-rotate(" + colorDeg +"deg)";
+   }
+   $(".colorChangeHair input").on("change", changeHairColor);
+
+
     //массивы с ссылками на картинки(например первый массив для глаз)
     var eyesArray = ["images/eyes1.png", "images/eyes2.png", "images/eyes3.png"];
     
@@ -21,129 +43,84 @@ jQuery(document).ready(function($){
     
     var colorE = 0;
     function changeEye(){
-       if(colorE < 3 && colorE >= 0){
-          $("#eyesId img").attr("src", eyesArray[colorE]);
-          colorE++;
-       }
-       else{
-        colorE = 0; 
-        changeEye();
-       }
+      colorE++;
+      if(colorE >= 3){colorE = 0;}
+      $("#eyesId img").attr("src", eyesArray[colorE]);
     }
 
     /////////////////
     var colorN = 0;
     function changeNose(){
-       if(colorN < 2 && colorN >= 0){
-          $("#noseId img").attr("src", noseArray[colorN]);
-          colorN++;
-       }
-       else{
-        colorN = 0; 
-        changeNose();
-       }
+      colorN++; 
+      if(colorN >= 2){colorN = 0;}
+      $("#noseId img").attr("src", noseArray[colorN]);
     }
 
     ////////////////
     var colorL = 0;
     function changeLips(){
-       if(colorL < 3 && colorL >= 0){
-          $("#lipsId img").attr("src", lipsArray[colorL]);
-          colorL++;
-       }
-       else{
-        colorL = 0; 
-        changeLips();
-       }
-    }
+      colorL++;
+      if(colorL >= 3){colorL = 0;}
+      $("#lipsId img").attr("src", lipsArray[colorL]);   
+      }
 
     ////////////////
     var colorP = 0;
     function changePupils(){
-       if(colorP < 4 && colorP >= 0){
-          $("#colorId img").attr("src", colorArray[colorP]);
-          colorP++;
-       }
-       else{
-        colorP = 0; 
-        changePupils();
-       }
+      colorP++;
+      if(colorP >= 4){colorP = 0;}
+      $("#colorId img").attr("src", colorArray[colorP]);
     }
 
      ////////////////
      var colorH = 0;
      function changeHair(){
-        if(colorH < 4 && colorH >= 0){
-           $("#hairId img").attr("src", hairArray[colorH]);
-           colorH++;
-        }
-        else{
-         colorH = 0; 
-         changeHair();
-        }
+      colorH++;
+      if(colorH >= 4){colorH = 0;}
+      $("#hairId img").attr("src", hairArray[colorH]);
      }
 
       ////////////////
       var colorT = 0;
       function changeTop(){
-         if(colorT < 4 && colorT >= 0){
-            $("#topId img").attr("src", topArray[colorT]);
-            colorT++;
-         }
-         else{
-          colorT = 0; 
-          changeTop();
-         }
+         colorT++;
+         if(colorT >= 3){colorT = 0;}
+         $("#topId img").attr("src", topArray[colorT]);
       }
  
        ////////////////
       var colorB = 0;
       function changeBrows(){
-          if(colorB < 3 && colorB >= 0){
-             $("#browsId img").attr("src", browsArray[colorB]);
-             colorB++;
-          }
-          else{
-           colorB = 0; 
-           changeBrows();
-          }
+         colorB++;
+         if(colorB >= 3){colorB = 0;}
+         $("#browsId img").attr("src", browsArray[colorB]);    
       }
 
       ////////////////
       var colorA = 0;
       function changeAccs(){
-         if(colorA < 3 && colorA >= 0){
-            $("#accsId img").attr("src", accsArray[colorA]);
-            colorA++;
-         }
-         else{
-          colorA = 0; 
-          changeAccs();
-         }
+         colorA++;
+         if(colorA >=3){colorA = 0;}
+         $("#accsId img").attr("src", accsArray[colorA]);
       }
 
       ////////////////
       var colorC = 0;
       function changeClothes(){
-         if(colorC < 3 && colorC >= 0){
-            $("#clothesId img").attr("src", clothesArray[colorC]);
-            colorC++;
-         }
-         else{
-          colorC = 0; 
-          changeClothes();
-         }
+         colorC++;
+         if(colorC >=3){colorC = 0;}
+         $("#clothesId img").attr("src", clothesArray[colorC]);   
       } 
       
      
-    $(".eyesButton").click(changeEye);
-    $(".noseButton").click(changeNose);
-    $(".lipsButton").click(changeLips);
-    $(".colorButton").click(changePupils);
-    $(".hairButton").click(changeHair);
-    $(".topButton").click(changeTop);
-    $(".browsButton").click(changeBrows);
-    $(".accsButton").click(changeAccs);
-    $(".clothesButton").click(changeClothes);
+    $("#eyesButton").click(changeEye);
+    $("#noseButton").click(changeNose);
+    $("#lipsButton").click(changeLips);
+    $("#colorButton").click(changePupils);
+    $("#hairButton").click(changeHair);
+    $("#topButton").click(changeTop);
+    $("#browsButton").click(changeBrows);
+    $("#accsButton").click(changeAccs);
+    $("#clothesButton").click(changeClothes);
     }
 );

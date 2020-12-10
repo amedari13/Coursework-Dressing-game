@@ -8,38 +8,61 @@
    </head>  
    
    <body> 
+      <!--  -->
+      <div id="body_button">
+         <div class="button_hola" id= "eyesButton"><span>Eyes</span></div>
+      </div>
+      <div id="body_button" style="margin-top: 10%; margin-left: 10%;">
+         <div class="button_hola" id="noseButton"><span>Nose</span></div>
+      </div>
+      <div id="body_button" style="margin-top: 20%; margin-left: 15%;">
+         <div class="button_hola"><span id="lipsButton">Lips</span></div>
+      </div>
+      <div id="body_button" style="margin-top: 30%; margin-left: 20%;">
+         <div class="button_hola" id="colorButton"><span>Pupils</span></div>
+      </div>
+      <!--  -->
+      <div id="body_button" style="position: absolute; top:0%; left: 120%;">
+         <div class="button_hola" id="hairButton"><span>Hair</span></div>
+      </div>
+      <div id="body_button" style="position: absolute; top:15%; left: 115%;">
+         <div class="button_hola" id="topButton"><span>Bangs</span></div>
+      </div>
+      <div id="body_button"  style="position: absolute; top:30%; left: 110%;">
+         <div class="button_hola" id="browsButton"><span>Brows</span></div>
+      </div>
+      <div id="body_button" style="position: absolute; top:45%; left: 100%;">
+         <div class="button_hola" id="accsButton"><span>Accessories</span></div>
+      </div>
+      <div id="body_button" style="position: absolute; top:80%;  left: 110%;">
+         <div class="button_hola" id="clothesButton"><span>Clothes</span></div>
+      </div>
+      <!--  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="slider">
+         <div class = "colorChange">
+            <input type="range" min="0" max="360"  id="EyeColor">
+         </div>
+         <div class = "colorChangeTop">
+            <input type="range" min="0" max="360"  id="TopColor">
+         </div>
+         <div class = "colorChangeHair">
+            <input type="range" min="0" max="360"  id="HairColor">
+         </div>
+      </div>
 <!--  -->
-      <div id="body_button" class="eyesButton">
-         <div class="button_hola"><span>Eyes</span></div>
-      </div>
-      <div id="body_button" class="noseButton" style="margin: 10%;">
-         <div class="button_hola"><span>Nose</span></div>
-      </div>
-      <div id="body_button" class="lipsButton" style="margin: 20%;">
-         <div class="button_hola"><span>Lips</span></div>
-      </div>
-      <div id="body_button" class="colorButton" style="margin: 30%;">
-         <div class="button_hola"><span>Pupils</span></div>
-      </div>
-      <div id="body_button" class="hairButton" style="position: absolute; top:0%; left: 120%;">
-         <div class="button_hola"><span>Hair</span></div>
-      </div>
-      <div id="body_button" class="topButton" style="position: absolute; top:15%; left: 110%;">
-         <div class="button_hola"><span>Bangs</span></div>
-      </div>
-      <div id="body_button" class="browsButton" style="position: absolute; top:30%; left: 100%;">
-         <div class="button_hola"><span>Brows</span></div>
-      </div>
-      <div id="body_button" class="accsButton" style="position: absolute; top:45%; left: 90%;">
-         <div class="button_hola"><span>Accessories</span></div>
-      </div>
-      <div id="body_button" class="clothesButton" style="position: absolute; top:60%;  left: 110%;">
-         <div class="button_hola"><span>Clothes</span></div>
-      </div>
-<!--  -->
-
-
-
       <div class="image-stack">
          
          <!-- туловище -->
@@ -54,12 +77,12 @@
 
          <!-- волосы -->
          <div class="image" id= "hairId" style="z-index: 1;">
-             <img src="images/hair1.png">
+             <img src="images/hair1.png" id = "forchangeHair">
          </div>
 
          <!-- челка -->
          <div class="image" id="topId" style="z-index: 4;">
-             <img src="images/top1.png">
+             <img src="images/top1.png" id = "forchangeTop">
          </div>
 
          <!-- нос -->
@@ -69,7 +92,7 @@
         
          <!-- зрачок -->
          <div class="image" id= "colorId" style="z-index: 4;">
-            <img src="images/color1.png">
+            <img src="images/color1.png" id = "forchange">
         </div>
 
         <!-- рот -->
