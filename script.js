@@ -1,4 +1,20 @@
 jQuery(document).ready(function($){
+   var DefaultWindowWidth = $(window).width();
+   if (DefaultWindowWidth < 1200)
+      $("link[rel=stylesheet]").attr({href : "styleSmall.css"});
+
+   $(window).bind("resize", resizeWindow);
+   function resizeWindow(e){
+     var newWindowWidth = $(window).width();
+      // Если ширина меньше 600 px, используется таблица стилей для мобильного
+      if(newWindowWidth < 1200){
+         $("link[rel=stylesheet]").attr({href : "styleSmall.css"});
+      } else if(newWindowWidth > 1200){
+       // Если ширина больше 600 px, используется таблица стилей для десктопа
+         $("link[rel=stylesheet]").attr({href : "styleBig.css"});
+     }
+   };
+
 
    function changeEyeColor(){
       var colorDeg = document.getElementById("EyeColor").value; 
@@ -21,7 +37,7 @@ jQuery(document).ready(function($){
    $(".colorChangeHair input").on("change", changeHairColor);
 
 
-    //массивы с ссылками на картинки(например первый массив для глаз)
+    //массивы с ссылками на картинки
     var eyesArray = ["images/eyes1.png", "images/eyes2.png", "images/eyes3.png"];
     
     var noseArray = ["images/nose1.png", "images/nose2.png"];

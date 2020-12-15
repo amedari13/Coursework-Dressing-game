@@ -1,0 +1,113 @@
+html { overflow-x:  hidden; }
+body{
+  background: linear-gradient(0deg, #7b7b83, #7f6161);
+  background-attachment: fixed;
+}
+
+.image-stack {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 100px;
+  min-width: 100%;
+}
+.image {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.buttonsColumn1, .buttonsColumn2{  
+  z-index: 999;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 10%;  
+  min-width: 10px;
+}
+.buttonsColumn1{
+    margin-left: 75%;
+}
+.buttonsColumn2{  
+    margin-left: 75%;
+    margin-top: 28%;
+}
+
+#clothesButton{
+  z-index: 999;
+  width: 10%;
+  margin-left: 69%;
+  margin-top: 57%;
+  position: absolute;
+  min-width: 10%;
+}
+
+
+#eyesButton, #noseButton, #hairButton,
+#topbutton, #lipsButton, #colorButton,
+#accsButton, #topButton, #browsButton{
+  width: 83%;
+}
+
+.button_hola,
+.button_hola::before,
+.button_hola::after,
+.button_hola span,
+.button_hola span::before,
+.button_hola span::after{
+  transition: all ease .5s;
+}
+    
+.button_hola{
+  position: relative;
+  display: inline-block;
+  padding: 0.3em;
+  margin: 1em;
+  border: solid 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ddf;
+  text-align: left;
+  /* padding-top: 1vh; */
+  min-width: 10px;
+  display: inline-block;
+}
+    
+.button_hola:hover{
+  box-shadow: 0 0 5em .5em rgba(50,50,150,0.5);
+}
+#clothesButton:hover{
+  box-shadow: 0 0 5em .5em rgba(0, 0, 3, 0.5);
+}
+
+.button_hola span{
+  text-align: center;
+  display: inline-block;
+  width: 90%;
+  height: 20%;
+  padding: 0.6em 0.6em;
+  min-width: 10px;
+  font-size: 60%;
+}
+
+/*/////////////////////////////////////////*/
+.slider{
+  z-index: 999;
+  position: absolute;
+  width: 15%;
+  margin-top: 56%;
+  margin-left: 82%;
+}
+input[type='range']{
+  -webkit-appearance: none; /*переопределение основных свойст внешнего вида ползунка*/
+  width: 80%;/*ширина*/
+  height: 15px; /*высота*/
+  border-radius: 5px; /*скругление углов*/
+  background: linear-gradient(30deg,  #301e1e, #6f6f8d, #301e1e); 
+  outline: none; /*граница при изменении*/
+  opacity: 0.5; /*прозрачность*/ 
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background:rgb(51, 51, 105);
+  height:10px;
+  width:10px;
+}
