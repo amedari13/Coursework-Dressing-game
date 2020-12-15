@@ -1,55 +1,27 @@
 <!DOCTYPE html>
 <html>
    <head>
-    <title>Made me your</title>
-    <link rel = "stylesheet" href="stylesheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="script.js"></script>
+      <meta charset="UTF-8">
+      <title>Made me your</title>
+      <link rel = "stylesheet" href="styleBig.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="script.js"></script>
    </head>  
    
    <body> 
-      <!--  -->
-      <div id="body_button">
-         <div class="button_hola" id= "eyesButton"><span>Eyes</span></div>
-      </div>
-      <div id="body_button" style="margin-top: 10%; margin-left: 10%;">
+      <div class = "buttonsColumn1">
+         <div class="button_hola" id="eyesButton"><span>Eyes</span></div>
          <div class="button_hola" id="noseButton"><span>Nose</span></div>
-      </div>
-      <div id="body_button" style="margin-top: 20%; margin-left: 15%;">
-         <div class="button_hola"><span id="lipsButton">Lips</span></div>
-      </div>
-      <div id="body_button" style="margin-top: 30%; margin-left: 20%;">
+         <div class="button_hola" id="lipsButton"><span>Lips</span></div>
          <div class="button_hola" id="colorButton"><span>Pupils</span></div>
       </div>
-      <!--  -->
-      <div id="body_button" style="position: absolute; top:0%; left: 120%;">
+      <div class = "buttonsColumn2">
          <div class="button_hola" id="hairButton"><span>Hair</span></div>
-      </div>
-      <div id="body_button" style="position: absolute; top:15%; left: 115%;">
          <div class="button_hola" id="topButton"><span>Bangs</span></div>
-      </div>
-      <div id="body_button"  style="position: absolute; top:30%; left: 110%;">
          <div class="button_hola" id="browsButton"><span>Brows</span></div>
-      </div>
-      <div id="body_button" style="position: absolute; top:45%; left: 100%;">
          <div class="button_hola" id="accsButton"><span>Accessories</span></div>
       </div>
-      <div id="body_button" style="position: absolute; top:80%;  left: 110%;">
-         <div class="button_hola" id="clothesButton"><span>Clothes</span></div>
-      </div>
-      <!--  -->
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="button_hola" id="clothesButton"><span>Clothes</span></div>
 
       <div class="slider">
          <div class = "colorChange">
@@ -62,12 +34,11 @@
             <input type="range" min="0" max="360"  id="HairColor">
          </div>
       </div>
-<!--  -->
-      <div class="image-stack">
-         
+
+      <div class="image-stack" id="screenshot">         
          <!-- туловище -->
          <div class="image" style="z-index: 2;">
-             <img src="images/main.png" >
+             <img src="images/main.png" style="border: solid 1px; color: #ddf;">
          </div>
          
          <!-- глаза -->
@@ -115,10 +86,5 @@
             <img src="images/clothes1.png">
          </div>
       </div>
-
-
-
-     
-
    </body>
 </html>
